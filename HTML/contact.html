@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/header-footer.css">
+    <link rel="stylesheet" href="../CSS/contact.css">
+    <script src="../JS/header-footer.js" defer></script>
+    <script src="https://kit.fontawesome.com/a74a8a2364.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header-container">
+        <div class="logo-container">
+            <a href="../index.html" class="logo">
+                <img src="../IMAGE/logo.png" alt="LLLC" />
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="cta-container">
+            <a href="https://your-google-form-link.com" class="cta-button">Join Us</a>
+        </div>
+    </header>
+
+    <div class="contact-page-container">
+        <div class="social-links-container">
+            <div>
+                <p><i class="fa-brands fa-discord"></i> Discord</p>
+                <a href="https://discord.com/invite/DiscordUser" target="_blank" rel="noopener noreferrer">Langara
+                    Language
+                    Learning
+                    Club</a>
+            </div>
+            <div>
+                <p><i class="fa-brands fa-instagram"></i> Instagram</p>
+                <a href="https://www.instagram.com/langaralanguagelearningclub/" target="_blank"
+                    rel="noopener noreferrer">Langara
+                    Language
+                    Learning
+                    Club</a>
+            </div>
+            <div>
+                <p><i class="fa-brands fa-twitter"></i> Twitter</p>
+                <a href="https://twitter.com/TwitterUser" target="_blank" rel="noopener noreferrer">Twitter</a>
+            </div>
+            <div>
+                <p><i class="fa-brands fa-linkedin"></i> LinkedIn</p>
+                <a href="https://linkedin.com/in/LinkedInUser" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+            <div>
+                <p><i class="fa-regular fa-envelope"></i> Email</p>
+                <a href="mailto:contact@example.com">Email</a>
+            </div>
+        </div>
+
+        <div class="contact-form-container">
+            <form>
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer-container">
+        <p>© 2024 Langara Language Learning Association</p>
+    </footer>
+    <button class="back-to-top-btn" id="back-to-top-btn" style="display: none;">↑</button>
+</body>
+
+</html>
