@@ -112,3 +112,19 @@
 .past-event-card a:hover {
     color: #0056b3;
 }
+
+@media (max-width: 768px) {
+    .events-page-container{
+        margin-top: 5rem;
+    }
+    .event-image {
+        max-width: 85%;
+        height: auto;
+    }
+    .event-text{
+        padding-left: 2rem;
+    }
+    .past-events-grid {
+        grid-template-columns: 1fr;
+    }
+}
