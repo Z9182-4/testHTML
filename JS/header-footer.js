@@ -19,7 +19,7 @@ window.onload = function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   const path = window.location.pathname.split("/").pop();
-  const links = document.querySelectorAll('nav ul li a');
+  const links = document.querySelectorAll('.dropdown-menu a');
 
   links.forEach(link => {
     const href = link.getAttribute('href').split("/").pop();
@@ -30,3 +30,28 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const menuButton = document.querySelector(".menu-button");
+    const menuItems = document.querySelector("header");
+
+    menuButton.addEventListener("click", function() {
+        menuItems.classList.toggle("menu-active"); 
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    var button = document.querySelector('.menu-button');
+    var navUl = document.querySelector('nav ul');
+
+    button.addEventListener('click', function() {
+        if (navUl.style.display === 'block') {
+            navUl.style.display = 'none';
+        } else {
+            navUl.style.display = 'block';
+        }
+    });
+});
+
+
