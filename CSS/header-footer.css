@@ -146,3 +146,57 @@ html {
 .back-to-top-btn:hover {
     opacity: 1;
 }
+
+
+
+@media (max-width: 768px) {
+    .content{
+        margin-top: 6rem;
+    }
+    .menu-button {
+        display: block;
+        background-color: orange;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        text-align: center;
+        cursor: pointer;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        border-radius:5px;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav ul.show {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .menu-active nav {
+        display: block;
+    }
+
+    nav ul li a {
+        display: block;
+        margin-top: 1rem;
+    }
+
+    nav,
+    .cta-container {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+@media (min-width: 769px) {
+    .menu-button {
+        display: none;
+    }
+}
