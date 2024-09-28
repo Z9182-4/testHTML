@@ -22,20 +22,17 @@
     font-size: 3rem;
 }
 
+.page-heading {
+    grid-column: span 3;
+    text-align: center;
+    margin-bottom: 20px;
+}
 .events-display {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
 }
-
-.page-heading {
-    grid-column: span 3;
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
 .event-card {
     display: flex;
     flex-direction: column;
@@ -46,6 +43,7 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 100%;
     margin: auto;
+    height: 100%;
 }
 
 .event-image {
@@ -58,21 +56,34 @@
 
 .event-info {
     padding: 15px;
+    padding-bottom: 60px;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: calc(100% - 60px);
+    position: relative;
 }
 
 .learn-more {
-    background-color: #007bff;
+    background-color: rgba(67, 99, 255, 0.91);
     color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.learn-more:hover {
+    background-color: rgb(67, 98, 255); 
+    color: #ffffff; 
 }
 
 .our-section {
@@ -87,6 +98,9 @@
 .our-vision-mission {
     display: grid;
     grid-template-columns: 0.75fr 1.15fr;
+    grid-template-areas:
+        "image title"
+        "image text";
     gap: 10px;
     align-items: start;
     margin-bottom: 40px;
@@ -94,18 +108,25 @@
 }
 
 .our-image {
+    grid-area: image;
     max-width: 80%;
     height: auto;
     border-radius: 10px;
     margin: 0 12.5%;
 }
 
+.our-h2 {
+    grid-area: title;
+    align-self: center;
+    margin: 0;
+}
+
 .our-text {
+    grid-area: text;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-
 .benefits-section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -120,8 +141,7 @@
 }
 
 .benefit-card h3 {
-    font-size: 2rem;
-    color: #6f42c1;
+    color: #4442c1;
     margin-bottom: 10px;
 }
 
@@ -152,4 +172,80 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+}
+h2{
+    color: #db6a13;
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.25rem;
+}
+
+@media (max-width: 768px) {
+    .event-card {
+        min-height: 300px;
+    }
+    .events-display {
+        display: block;
+    }
+
+    .event-card {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .event-image {
+        width: 40%;
+        height: auto;
+        object-fit: cover;
+        margin-right: 10px;
+    }
+
+    .event-info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 15px;
+        padding-bottom: 60px;
+        position: relative;
+    }
+    .learn-more {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50%;
+    }
+    .benefits-section {
+        display: block;
+    }
+    
+    .benefit-card {
+        width: 95%;
+        padding: 0;
+    }
+    .our-text p{
+        display: inline;
+        width: 95%;
+    }
+    .our-image {
+        display: none;
+    }
+    
+    .our-vision-mission {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "title"
+            "text";
+        width: 95%;
+    }
 }
